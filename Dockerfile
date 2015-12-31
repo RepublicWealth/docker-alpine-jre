@@ -1,5 +1,5 @@
-FROM alpine:3.2
-MAINTAINER Vladimir Krivosheev <develar@gmail.com>
+FROM janeczku/alpine-kubernetes:3.2
+MAINTAINER Republic Wealth Management <engineers@republicwealth.com.au>
 
 ENV JAVA_VERSION_MAJOR 8
 ENV JAVA_VERSION_MINOR 66
@@ -40,4 +40,4 @@ ENV JAVA_HOME /jre
 ENV PATH ${PATH}:${JAVA_HOME}/bin
 ENV LANG C.UTF-8
 
-ENTRYPOINT ["java", "-Djava.security.egd=file:/dev/urandom"]
+CMD ["java", "-Djava.security.egd=file:/dev/urandom"]
