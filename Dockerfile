@@ -43,4 +43,4 @@ RUN apk add --update curl ca-certificates && \
     rm -rf /jre/lib/oblique-fonts && \
     rm -rf /tmp/* /var/cache/apk/*
 
-ENTRYPOINT ["java", "-Djava.security.egd=file:/dev/urandom"]
+CMD ["java", "-version"]
