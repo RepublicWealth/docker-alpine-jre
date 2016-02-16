@@ -42,5 +42,3 @@ RUN apk add --update curl ca-certificates && \
     rm -rf /jre/lib/jfr && \
     rm -rf /jre/lib/oblique-fonts && \
     rm -rf /tmp/* /var/cache/apk/*
-
-CMD ["java", "-version"]
