@@ -7,7 +7,8 @@ ENV JAVA_VERSION_MAJOR=8  \
     JAVA_PACKAGE=server-jre \
     JAVA_HOME=/jre \
     PATH=${PATH}:/jre/bin \
-    LANG=C.UTF-8
+    LANG=C.UTF-8 \
+    NEWRELIC_VERSION=3.25.0
 
 # about nsswitch.conf - see https://registry.hub.docker.com/u/frolvlad/alpine-oraclejdk8/dockerfile/
 
@@ -42,3 +43,5 @@ RUN apk add --update curl ca-certificates && \
     rm -rf /jre/lib/jfr && \
     rm -rf /jre/lib/oblique-fonts && \
     rm -rf /tmp/* /var/cache/apk/*
+
+ADD http://download.newrelic.com/newrelic/java-agent/newrelic-agent/${NEWRELIC_VERSION}/newrelic-agent-${NEWRELIC_VERSION}.jar  /app/
